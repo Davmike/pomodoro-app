@@ -1,6 +1,6 @@
 
 
-function Settings() {
+function Long() {
   return (
     <div>
       
@@ -8,4 +8,4 @@ function Settings() {
   )
 }
 
-export default Settings
+export default Long
