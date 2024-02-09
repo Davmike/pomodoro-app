@@ -32,7 +32,7 @@ function Head() {
           />
           <div className="absolute flex items-center w-[100%] pl-[21px] pr-[24px]">
             <Link
-              to="/pomodoro"
+              to="/"
               className={`text-[12px] ${
                 page === 1
                   ? "duration-500 text-[#1E213F]"

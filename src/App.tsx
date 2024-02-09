@@ -13,7 +13,7 @@ function App() {
   const [color, setColor] = useState<number>(1);
   const router = createBrowserRouter([
     {
-      path: "/pomodoro",
+      path: "/",
       element: <Layout />,
     },
     {
