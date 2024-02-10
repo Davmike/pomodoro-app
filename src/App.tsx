@@ -4,6 +4,7 @@ import { MyContext } from "./Components/Context";
 import { useState } from "react";
 import Long from "./Components/Long";
 import Short from "./Components/Short";
+import Pomodoro from "./Components/Pomodoro";
 
 function App() {
   const [page, setPage] = useState<number>(1);
@@ -14,7 +15,7 @@ function App() {
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <Layout />,
+      element: <Pomodoro />,
     },
     {
       path: "/shortbreak",
