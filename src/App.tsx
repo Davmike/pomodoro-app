@@ -1,4 +1,4 @@
-import Layout from "./Components/Layout";
+// import Layout from "./Components/Layout";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { MyContext } from "./Components/Context";
 import { useState } from "react";
@@ -9,6 +9,7 @@ import Pomodoro from "./Components/Pomodoro";
 function App() {
   const [page, setPage] = useState<number>(1);
   // const [menu, setMenu] = useState<boolean>(false);
+  const [pomodoro, setPomodoro] = useState<number>(15);
 
   const [font, setFont] = useState<number>(1);
   const [color, setColor] = useState<number>(1);
@@ -29,7 +30,9 @@ function App() {
 
   return (
     <>
-      <MyContext.Provider value={{ page, setPage, font, color }}>
+      <MyContext.Provider
+        value={{ page, setPage, font, color, pomodoro, setPomodoro }}
+      >
         <RouterProvider router={router} />
       </MyContext.Provider>
     </>

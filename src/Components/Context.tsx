@@ -1,10 +1,12 @@
 import { createContext, useContext } from "react";
 
 interface ComponentsProps {
-  setPage: any;
+  setPage: (page: number) => void;
   page: number;
   font: number;
   color: number;
+  pomodoro: number;
+  setPomodoro: (pomodoro: number) => void;
 }
 
 export const MyContext = createContext<ComponentsProps | null>(null);

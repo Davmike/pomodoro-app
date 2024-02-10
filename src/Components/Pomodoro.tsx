@@ -1,8 +1,21 @@
+import React, { useContext, useEffect } from "react";
 import { CircularProgressbar } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 import Layout from "./Layout";
+import { MyContext } from "./Context";
 
 function Pomodoro() {
+  const context = useContext(MyContext);
+  const { pomodoro, setPomodoro }: any = context;
+
+  useEffect(() => {
+    setTimeout(() => {
+      if (pomodoro < 100) {
+        setPomodoro(pomodoro + 1);
+      }
+    }, 50);
+  }, [pomodoro]);
+
   return (
     <div>
       <Layout />
