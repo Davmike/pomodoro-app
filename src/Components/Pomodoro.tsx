@@ -29,12 +29,15 @@ function Pomodoro() {
           className="w-[300px] h-[300px] rounded-[50%] flex items-center justify-center mt-[48px] mb-[79px]"
         >
           <div className="w-[268px] h-[268px] rounded-[50%] bg-[#161932] flex flex-col justify-center items-center">
-            <h2 className="text-[80px] md:text-[100px] text-[#D7E0FF] font-bold">
-              17:59
-            </h2>
-            <p className="text-[#D7E0FF] text-[14px] font-bold md:text-[16px]">
-              P A U S E
-            </p>
+            <div style={{ width: 150 }}>
+              <CircularProgressbar value={pomodoro} text={`${pomodoro}%`} />
+              <h2 className="text-[80px] md:text-[100px] text-[#D7E0FF] font-bold">
+                15:00
+              </h2>
+              <p className="text-[#D7E0FF] text-[14px] font-bold md:text-[16px]">
+                P A U S E
+              </p>
+            </div>
           </div>
         </div>
       </div>
