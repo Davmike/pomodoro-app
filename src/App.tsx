@@ -10,9 +10,14 @@ function App() {
   const [page, setPage] = useState<number>(1);
   // const [menu, setMenu] = useState<boolean>(false);
   const [pomodoro, setPomodoro] = useState<number>(15);
+  const [short, setShort] = useState<number>(5);
+  const [long, setLong] = useState<number>(10);
 
   const [font, setFont] = useState<number>(1);
   const [color, setColor] = useState<number>(1);
+  const [pause, setPause] = useState<boolean>(false);
+  const [result, setResult] = useState<undefined | string>("00:00");
+
   const router = createBrowserRouter([
     {
       path: "/",
@@ -31,7 +36,24 @@ function App() {
   return (
     <>
       <MyContext.Provider
-        value={{ page, setPage, font, color, pomodoro, setPomodoro }}
+        value={{
+          page,
+          setPage,
+          font,
+          color,
+          pomodoro,
+          setPomodoro,
+          short,
+          setShort,
+          long,
+          setLong,
+          pause,
+          setPause,
+          result,
+          setResult,
+          setFont,
+          setColor
+        }}
       >
         <RouterProvider router={router} />
       </MyContext.Provider>
