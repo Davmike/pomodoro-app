@@ -1,6 +1,9 @@
 import { useContext, useEffect, useState } from "react";
 // import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
-import { CircularProgressbarWithChildren } from "react-circular-progressbar";
+import {
+  CircularProgressbarWithChildren,
+  buildStyles,
+} from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 import Layout from "./Layout";
 import { MyContext } from "./Context";
@@ -61,6 +64,10 @@ function Pomodoro() {
                 value={(timerValue / 900) * 100}
                 text={formattedTime}
                 className="custom-progress-bar"
+                styles={buildStyles({
+                  textColor: "white",
+                  pathTransitionDuration: 0.15,
+                })}
               >
                 <p
                   className="text-[#D7E0FF] text-[14px] font-bold md:text-[16px] cursor-pointer mt-[120px]"
