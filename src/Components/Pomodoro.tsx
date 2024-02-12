@@ -1,13 +1,14 @@
-import React, { useContext, useEffect, useState } from "react";
-import { CircularProgressbar } from "react-circular-progressbar";
+import { useContext, useEffect, useState } from "react";
+// import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
+import { CircularProgressbarWithChildren } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 import Layout from "./Layout";
 import { MyContext } from "./Context";
 
 function Pomodoro() {
   const context = useContext(MyContext);
-  const { pomodoro, setPomodoro, pause, setPause }: any = context;
-  const [timerValue, setTimerValue] = useState(900); 
+  const { pause, setPause }: any = context;
+  const [timerValue, setTimerValue] = useState(900);
 
   useEffect(() => {
     let timerId: number;
@@ -48,18 +49,27 @@ function Pomodoro() {
           className="w-[300px] h-[300px] rounded-[50%] flex items-center justify-center mt-[48px] mb-[79px]"
         >
           <div className="w-[268px] h-[268px] rounded-[50%] bg-[#161932] flex flex-col justify-center items-center">
-            <div style={{ width: 150 }}>
-              <CircularProgressbar
-                value={(timerValue / 900) * 100} // Percentage value based on total duration
-                text={formattedTime}
-              />
-            </div>
-            <p
-              className="text-[#D7E0FF] text-[14px] font-bold md:text-[16px] cursor-pointer"
-              onClick={() => setPause(!pause)}
+            <div
+              style={{
+                width: "100%",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
             >
-              {pause ? "S T A R T" : "P A U S E"}
-            </p>
+              <CircularProgressbarWithChildren
+                value={(timerValue / 900) * 100}
+                text={formattedTime}
+                className="custom-progress-bar"
+              >
+                <p
+                  className="text-[#D7E0FF] text-[14px] font-bold md:text-[16px] cursor-pointer mt-[120px]"
+                  onClick={() => setPause(!pause)}
+                >
+                  {pause ? "S T A R T" : "P A U S E"}
+                </p>
+              </CircularProgressbarWithChildren>
+            </div>
           </div>
         </div>
       </div>

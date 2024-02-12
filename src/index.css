@@ -13,3 +13,33 @@
 body {
   background: #1e213f;
 }
+
+.custom-progress-bar {
+  width: 260px;
+  height: 260px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.custom-progress-bar .CircularProgressbar-trail,
+.custom-progress-bar .CircularProgressbar-path {
+  stroke-width: 3;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.5s ease 0s;
+}
+
+.custom-progress-bar .CircularProgressbar-path {
+  stroke: #f87070;
+  stroke-width: 3;
+}
+
+.custom-progress-bar .CircularProgressbar-text {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
