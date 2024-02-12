@@ -15,7 +15,7 @@ function App() {
 
   const [font, setFont] = useState<number>(1);
   const [color, setColor] = useState<number>(1);
-  const [pause, setPause] = useState<boolean>(false);
+  const [pause, setPause] = useState<boolean>(true);
   const [result, setResult] = useState<undefined | string>("00:00");
 
   const router = createBrowserRouter([
@@ -52,7 +52,7 @@ function App() {
           result,
           setResult,
           setFont,
-          setColor
+          setColor,
         }}
       >
         <RouterProvider router={router} />
