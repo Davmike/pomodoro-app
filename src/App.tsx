@@ -5,6 +5,7 @@ import { useState } from "react";
 import Long from "./Components/Long";
 import Short from "./Components/Short";
 import Pomodoro from "./Components/Pomodoro";
+import Settings from "./Components/Settings";
 
 function App() {
   const [page, setPage] = useState<number>(1);
@@ -30,6 +31,10 @@ function App() {
     {
       path: "/longbreak",
       element: <Long />,
+    },
+    {
+      path: "/settings",
+      element: <Settings />,
     },
   ]);
 

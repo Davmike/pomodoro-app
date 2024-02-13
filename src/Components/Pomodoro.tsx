@@ -7,10 +7,12 @@ import "react-circular-progressbar/dist/styles.css";
 import Layout from "./Layout";
 import { MyContext } from "./Context";
 import SettingImg from "../../public/assets/icon-settings.svg";
+import { useNavigate } from "react-router-dom";
 
 function Pomodoro() {
+  const navigate = useNavigate();
   const context = useContext(MyContext);
-  const { pause, setPause }: any = context;
+  const { pause, setPause, menu, setMenu }: any = context;
   const [timerValue, setTimerValue] = useState(900);
 
   useEffect(() => {
@@ -39,6 +41,7 @@ function Pomodoro() {
     seconds < 10 ? "0" : ""
   }${seconds}`;
 
+  console.log(menu);
   return (
     <div>
       <Layout />
@@ -80,8 +83,17 @@ function Pomodoro() {
           </div>
         </div>
       </div>
+
       <div className="flex justify-center items-center">
-        <img className="cursor-pointer" src={SettingImg} alt="" />
+        <img
+          className="cursor-pointer"
+          src={SettingImg}
+          alt=""
+          onClick={() => {
+            setMenu(!menu);
+            // navigate("/settings");
+          }}
+        />
       </div>
     </div>
   );
