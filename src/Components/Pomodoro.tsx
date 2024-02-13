@@ -8,6 +8,7 @@ import Layout from "./Layout";
 import { MyContext } from "./Context";
 import SettingImg from "../../public/assets/icon-settings.svg";
 import { useNavigate } from "react-router-dom";
+import Settings from "./Settings";
 
 function Pomodoro() {
   const navigate = useNavigate();
@@ -83,7 +84,7 @@ function Pomodoro() {
           </div>
         </div>
       </div>
-
+      {menu && <Settings />}
       <div className="flex justify-center items-center">
         <img
           className="cursor-pointer"
