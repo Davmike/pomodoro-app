@@ -8,7 +8,7 @@ import Pomodoro from "./Components/Pomodoro";
 
 function App() {
   const [page, setPage] = useState<number>(1);
-  // const [menu, setMenu] = useState<boolean>(false);
+  const [menu, setMenu] = useState<boolean>(false);
   const [pomodoro, setPomodoro] = useState<number>(15);
   const [short, setShort] = useState<number>(5);
   const [long, setLong] = useState<number>(10);
@@ -37,6 +37,8 @@ function App() {
     <>
       <MyContext.Provider
         value={{
+          menu,
+          setMenu,
           page,
           setPage,
           font,

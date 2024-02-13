@@ -1,8 +1,10 @@
 import { createContext, useContext } from "react";
 
 interface ComponentsProps {
-  setPage: (page: number) => void;
   page: number;
+  setPage: (page: number) => void;
+  menu: boolean;
+  setMenu: (menu: boolean) => void;
   font: number;
   setFont: (font: number) => void;
   color: number;

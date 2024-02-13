@@ -6,6 +6,7 @@ import {
 import "react-circular-progressbar/dist/styles.css";
 import Layout from "./Layout";
 import { MyContext } from "./Context";
+import SettingImg from "../../public/assets/icon-settings.svg";
 
 function Pomodoro() {
   const context = useContext(MyContext);
@@ -78,6 +79,9 @@ function Pomodoro() {
             </div>
           </div>
         </div>
+      </div>
+      <div className="flex justify-center items-center">
+        <img className="cursor-pointer" src={SettingImg} alt="" />
       </div>
     </div>
   );
