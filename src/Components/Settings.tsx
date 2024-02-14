@@ -9,7 +9,7 @@ function Settings() {
   const context = useContext(MyContext);
   return (
     context?.menu && (
-      <div className="w-[327px] h-[549px] bg-[white] rounded-[15px] absolute top-0 left-0">
+      <div className="w-[327px] h-[549px] bg-[white] rounded-[15px] fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
         <div className="flex justify-between items-center px-[24px] pt-[24px] pb-[28px]">
           <h1 className="text-[#1E213F] font-bold text-[20px]">Settings</h1>
           <img
