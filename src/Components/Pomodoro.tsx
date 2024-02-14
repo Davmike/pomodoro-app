@@ -40,7 +40,6 @@ function Pomodoro() {
     seconds < 10 ? "0" : ""
   }${seconds}`;
 
-  console.log(menu);
   return (
     <div>
       <Layout />
