@@ -75,16 +75,20 @@ function Settings() {
                     <img
                       src={arrowUp}
                       className="cursor-pointer"
-                      onClick={() =>
-                        context?.setPomodoro(context?.pomodoro + 1)
-                      }
+                      onClick={() => {
+                        const newValue = context?.pomodoro + 1;
+                        context?.setPomodoro(newValue);
+                        context?.setTimerValue(newValue * 60);
+                      }}
                     />
                     <img
                       src={arrowDown}
                       className="cursor-pointer"
-                      onClick={() =>
-                        context?.setPomodoro(context?.pomodoro - 1)
-                      }
+                      onClick={() => {
+                        const newValue = context?.pomodoro - 1;
+                        context?.setPomodoro(newValue);
+                        context?.setTimerValue(newValue * 60);
+                      }}
                     />
                   </div>
                 </div>
@@ -120,12 +124,20 @@ function Settings() {
                     <img
                       src={arrowUp}
                       className="cursor-pointer"
-                      onClick={() => context?.setShort(context?.short + 1)}
+                      onClick={() => {
+                        const newShortValue = context?.short + 1;
+                        context?.setShort(newShortValue);
+                        context?.setShortTimerValue(newShortValue * 60);
+                      }}
                     />
                     <img
                       src={arrowDown}
                       className="cursor-pointer"
-                      onClick={() => context?.setShort(context?.short - 1)}
+                      onClick={() => {
+                        const newShortValue = context?.short - 1;
+                        context?.setShort(newShortValue);
+                        context?.setShortTimerValue(newShortValue * 60);
+                      }}
                     />
                   </div>
                 </div>
@@ -161,12 +173,20 @@ function Settings() {
                     <img
                       src={arrowUp}
                       className="cursor-pointer"
-                      onClick={() => context?.setLong(context?.long + 1)}
+                      onClick={() => {
+                        const newValue = context?.long + 1;
+                        context?.setLong(newValue);
+                        context?.setLongTimerValue(newValue * 60);
+                      }}
                     />
                     <img
                       src={arrowDown}
                       className="cursor-pointer"
-                      onClick={() => context?.setLong(context?.long - 1)}
+                      onClick={() => {
+                        const newValue = context?.long - 1;
+                        context?.setLong(newValue);
+                        context?.setLongTimerValue(newValue * 60);
+                      }}
                     />
                   </div>
                 </div>

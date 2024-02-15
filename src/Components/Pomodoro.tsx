@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect } from "react";
 import { CircularProgressbarWithChildren } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 import Layout from "./Layout";
@@ -8,14 +8,14 @@ import Settings from "./Settings";
 
 function Pomodoro() {
   const context = useContext(MyContext);
-  const { pause, setPause, menu, setMenu }: any = context;
-  const [timerValue, setTimerValue] = useState(900);
+  const { pause, setPause, menu, setMenu, setTimerValue, timerValue }: any =
+    context;
 
   useEffect(() => {
     let timerId: number;
     if (!pause) {
       timerId = setInterval(() => {
-        setTimerValue((prevValue) => {
+        setTimerValue((prevValue: number) => {
           if (prevValue > 0) {
             return prevValue - 1;
           } else {

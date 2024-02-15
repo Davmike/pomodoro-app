@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect } from "react";
 import { CircularProgressbarWithChildren } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 import Layout from "./Layout";
@@ -8,14 +8,20 @@ import Settings from "./Settings";
 
 function Short() {
   const context = useContext(MyContext);
-  const { pause, setPause, menu, setMenu }: any = context;
-  const [timerValue, setTimerValue] = useState(300);
+  const {
+    pause,
+    setPause,
+    menu,
+    setMenu,
+    shortTimerValue,
+    setShortTimerValue,
+  }: any = context;
 
   useEffect(() => {
     let timerId: number;
     if (!pause) {
       timerId = setInterval(() => {
-        setTimerValue((prevValue) => {
+        setShortTimerValue((prevValue: number) => {
           if (prevValue > 0) {
             return prevValue - 1;
           } else {
@@ -30,8 +36,8 @@ function Short() {
     return () => clearInterval(timerId);
   }, [pause, setPause]);
 
-  const minutes = Math.floor(timerValue / 60);
-  const seconds = timerValue % 60;
+  const minutes = Math.floor(shortTimerValue / 60);
+  const seconds = shortTimerValue % 60;
 
   const formattedTime = `${minutes < 10 ? "0" : ""}${minutes}:${
     seconds < 10 ? "0" : ""
@@ -79,7 +85,7 @@ function Short() {
               }}
             >
               <CircularProgressbarWithChildren
-                value={(timerValue / 300) * 100}
+                value={(shortTimerValue / 300) * 100}
                 text={formattedTime}
                 className="custom-progress-bar"
                 styles={dynamicStyles}

@@ -19,6 +19,12 @@ interface ComponentsProps {
   setPause: (pause: boolean) => void;
   result: undefined | string;
   setResult: (result: undefined | string) => void;
+  timerValue: number;
+  setTimerValue: (timerValue: number) => void;
+  longTimerValue: number;
+  setLongTimerValue: (longTimerValue: number) => void;
+  shortTimerValue: number;
+  setShortTimerValue: (shortTimerValue: number) => void;
 }
 
 export const MyContext = createContext<ComponentsProps | null>(null);

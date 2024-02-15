@@ -11,9 +11,11 @@ function App() {
   const [page, setPage] = useState<number>(1);
   const [menu, setMenu] = useState<boolean>(false);
   const [pomodoro, setPomodoro] = useState<number>(15);
+  const [timerValue, setTimerValue] = useState<number>(900);
   const [short, setShort] = useState<number>(5);
+  const [shortTimerValue, setShortTimerValue] = useState<number>(300);
   const [long, setLong] = useState<number>(10);
-
+  const [longTimerValue, setLongTimerValue] = useState<number>(600);
   const [font, setFont] = useState<number>(1);
   const [color, setColor] = useState<number>(1);
   const [pause, setPause] = useState<boolean>(true);
@@ -60,6 +62,12 @@ function App() {
           setResult,
           setFont,
           setColor,
+          timerValue,
+          setTimerValue,
+          longTimerValue,
+          setLongTimerValue,
+          shortTimerValue,
+          setShortTimerValue,
         }}
       >
         <RouterProvider router={router} />
