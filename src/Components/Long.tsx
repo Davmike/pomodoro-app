@@ -6,10 +6,12 @@ import {
 import "react-circular-progressbar/dist/styles.css";
 import Layout from "./Layout";
 import { MyContext } from "./Context";
+import SettingImg from "../../public/assets/icon-settings.svg";
+import Settings from "./Settings";
 
 function Long() {
   const context = useContext(MyContext);
-  const { pause, setPause }: any = context;
+  const { pause, setPause, menu, setMenu }: any = context;
   const [timerValue, setTimerValue] = useState(600);
 
   useEffect(() => {
@@ -78,6 +80,17 @@ function Long() {
             </div>
           </div>
         </div>
+      </div>
+      {menu && <Settings />}
+      <div className="flex justify-center items-center">
+        <img
+          className="cursor-pointer"
+          src={SettingImg}
+          alt=""
+          onClick={() => {
+            setMenu(!menu);
+          }}
+        />
       </div>
     </div>
   );

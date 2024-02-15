@@ -14,6 +14,18 @@ body {
   background: #1e213f;
 }
 
+.font-KumbhSans {
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+.font-RobotoSlab {
+  font-family: "Roboto Slab", serif;
+}
+
+.font-SpaceMono {
+  font-family: "Space Mono", monospace;
+}
+
 .custom-progress-bar {
   width: 260px;
   height: 260px;

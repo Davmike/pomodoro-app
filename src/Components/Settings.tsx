@@ -20,11 +20,11 @@ function Settings() {
           <div className="flex justify-between items-center px-[24px] pt-[24px] pb-[28px]">
             <h1
               className={`text-[#1E213F] font-bold text-[20px] ${
-                context?.font == 1
+                context?.font === 1
                   ? "font-KumbhSans"
-                  : context.font == 2
+                  : context?.font === 2
                   ? "font-RobotoSlab"
-                  : "SpaceMono"
+                  : "font-SpaceMono"
               }`}
             >
               Settings
@@ -61,7 +61,7 @@ function Settings() {
                         ? "font-KumbhSans"
                         : context?.font == 2
                         ? "font-RobotoSlab"
-                        : "SpaceMono"
+                        : "font-SpaceMono"
                     }  font-bold w-[30px] h-[20px] bg-transparent focus:outline-none`}
                     type="number"
                     name="number"
