@@ -1,8 +1,5 @@
 import { useContext, useEffect, useState } from "react";
-import {
-  CircularProgressbarWithChildren,
-  buildStyles,
-} from "react-circular-progressbar";
+import { CircularProgressbarWithChildren } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 import Layout from "./Layout";
 import { MyContext } from "./Context";
@@ -40,6 +37,26 @@ function Long() {
     seconds < 10 ? "0" : ""
   }${seconds}`;
 
+  const getStrokeColor = () => {
+    switch (context?.color) {
+      case 1:
+        return "#f87070";
+      case 2:
+        return "#70f3f8";
+      case 3:
+        return "#D881F8";
+      default:
+        return "#f87070";
+    }
+  };
+
+  const dynamicStyles = {
+    root: {}, // Root element styles if needed
+    path: { stroke: getStrokeColor() }, // Apply dynamic stroke color here
+    trail: {}, // Trail element styles if needed
+    text: { fill: "#fff" }, // Text element styles
+  };
+
   return (
     <div>
       <Layout />
@@ -65,10 +82,7 @@ function Long() {
                 value={(timerValue / 600) * 100}
                 text={formattedTime}
                 className="custom-progress-bar"
-                styles={buildStyles({
-                  textColor: "white",
-                  pathTransitionDuration: 0.15,
-                })}
+                styles={dynamicStyles}
               >
                 <p
                   className="text-[#D7E0FF] text-[14px] font-bold md:text-[16px] cursor-pointer mt-[120px]"

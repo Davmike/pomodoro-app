@@ -41,9 +41,16 @@ body {
   transition: stroke-dashoffset 0.5s ease 0s;
 }
 
-.custom-progress-bar .CircularProgressbar-path {
-  stroke: #f87070;
-  stroke-width: 3;
+.custom-progress-bar.color-1 {
+  stroke: #f87070; /* Red color */
+}
+
+.custom-progress-bar.color-2 {
+  stroke: #70f3f8; /* Blue color */
+}
+
+.custom-progress-bar.color-3 {
+  stroke: #d881f8; /* Purple color */
 }
 
 .custom-progress-bar .CircularProgressbar-text {
