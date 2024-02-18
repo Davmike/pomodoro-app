@@ -12,6 +12,10 @@
 
 body {
   background: #1e213f;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center;
 }
 
 .font-KumbhSans {

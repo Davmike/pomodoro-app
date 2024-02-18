@@ -44,7 +44,7 @@ function Settings() {
             <div className="flex flex-col gap-[8px] w-[100%] md:flex-row">
               <div className="flex items-center justify-between w-[100%] px-[24px] mt-[18px] md:flex-col  md:px-[0px]">
                 <p
-                  className={`text-[12px] text-[#1E213F] opacity-40  ${
+                  className={`text-[12px] text-[#1E213F] opacity-40 md:mr-[70px] ${
                     context?.font == 1
                       ? "font-KumbhSans"
                       : context?.font == 2
@@ -95,7 +95,7 @@ function Settings() {
               </div>
               <div className="flex items-center justify-between w-[100%] px-[24px] mt-[18px] md:flex-col md:px-[0px]">
                 <p
-                  className={`text-[12px] text-[#1E213F] opacity-40  ${
+                  className={`text-[12px] text-[#1E213F] opacity-40 md:mr-[70px] ${
                     context?.font == 1
                       ? "font-KumbhSans"
                       : context?.font == 2
@@ -144,7 +144,7 @@ function Settings() {
               </div>
               <div className="flex items-center justify-between w-[100%] px-[24px] mt-[18px] md:flex-col  md:px-[0px]">
                 <p
-                  className={`text-[12px] text-[#1E213F] opacity-40  ${
+                  className={`text-[12px] text-[#1E213F] opacity-40 md:mr-[70px] ${
                     context?.font == 1
                       ? "font-KumbhSans"
                       : context?.font == 2
@@ -193,7 +193,7 @@ function Settings() {
               </div>
             </div>
           </div>
-          <div className="flex flex-col items-center gap-[18px] border-b border-b-solid border-b-[#E3E1E1] md:flex-row md:justify-between md:mt-[24px] md:pb-[24px]">
+          <div className="flex flex-col items-center gap-[18px] border-b border-b-solid border-b-[#E3E1E1] md:flex-row md:justify-between md:mt-[24px] md:pb-[24px] md:px-[24px]">
             <h2 className="text-[11px] text-[#161932] font-kumbhSans font-bold tracking-[4.231px] mt-[24px] md:m-0">
               FONT
             </h2>
@@ -236,7 +236,7 @@ function Settings() {
               </button>
             </div>
           </div>
-          <div className="flex flex-col items-center w-[100%] gap-[18px] md:flex-row md:justify-between md:mt-[24px] md:mb-[30px]">
+          <div className="flex flex-col items-center w-[100%] gap-[18px] md:flex-row md:justify-between md:mt-[24px] md:mb-[30px] md:px-[24px]">
             <h2 className="text-[11px] text-[#161932] font-kumbhSans font-bold tracking-[4.231px] mt-[16px] md:m-0">
               COLOR
             </h2>
