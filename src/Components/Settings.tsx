@@ -16,7 +16,7 @@ function Settings() {
             context?.setMenu(!context?.menu);
           }}
         ></div>
-        <div className="w-[327px] h-[549px] bg-[white] rounded-[15px] fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+        <div className="w-[327px] h-[549px] bg-[white] rounded-[15px] fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 md:w-[540px] md:h-[464px]">
           <div className="flex justify-between items-center px-[24px] pt-[24px] pb-[28px]">
             <h1
               className={`text-[#1E213F] font-bold text-[20px] ${
@@ -37,12 +37,12 @@ function Settings() {
             />
           </div>
           <hr className="h-[1px] bg-[#e3e1e1]" />
-          <h2 className="tetx-[#161932] text-[11px] font-bold tracking-[4px] flex justify-center mt-[24px]">
+          <h2 className="tetx-[#161932] text-[11px] font-bold tracking-[4px] flex justify-center mt-[24px] md:justify-start md:ml-[27px]">
             TIME (MINUTES)
           </h2>
           <div>
-            <div className="flex flex-col gap-[8px] w-[100%] md:flex-row md:gap-[21px]">
-              <div className="flex items-center justify-between w-[100%] px-[24px] mt-[18px]">
+            <div className="flex flex-col gap-[8px] w-[100%] md:flex-row">
+              <div className="flex items-center justify-between w-[100%] px-[24px] mt-[18px] md:flex-col  md:px-[0px]">
                 <p
                   className={`text-[12px] text-[#1E213F] opacity-40  ${
                     context?.font == 1
@@ -93,7 +93,7 @@ function Settings() {
                   </div>
                 </div>
               </div>
-              <div className="flex items-center justify-between w-[100%] px-[24px]">
+              <div className="flex items-center justify-between w-[100%] px-[24px] mt-[18px] md:flex-col md:px-[0px]">
                 <p
                   className={`text-[12px] text-[#1E213F] opacity-40  ${
                     context?.font == 1
@@ -142,7 +142,7 @@ function Settings() {
                   </div>
                 </div>
               </div>
-              <div className="flex items-center justify-between w-[100%] mb-[24px] px-[24px]">
+              <div className="flex items-center justify-between w-[100%] px-[24px] mt-[18px] md:flex-col  md:px-[0px]">
                 <p
                   className={`text-[12px] text-[#1E213F] opacity-40  ${
                     context?.font == 1
